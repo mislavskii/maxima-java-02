@@ -2,14 +2,37 @@ package org.example;
 
 public class App {
     public static void main( String[] args ) {
-        Cat murzik = new Cat("Мурзик", false);
-        System.out.println(murzik.getName());
-        System.out.println("Angry? " + murzik.isAngry());
 
-        Cat barsik = new Cat("Барсик");
-        barsik.printName();
-        System.out.println("Angry? " + barsik.isAngry());
+        City barnaul = new City("Барнаул", 258);
+        City ulgiy = new City("Улгий", 630);
+        City n_kuznetsk = new City("Новокузнецк", 360);
 
-        Cat.sayMeow(3);  // static can invoke for class with no object created
+        City[] cities = {barnaul, ulgiy, n_kuznetsk};
+
+        for (City city : cities) {
+            System.out.println(city.getName()
+                    + ": " + city.getDistanceKm() + " км");
+        }
+        System.out.println();
+
+        Transport gazelle = new Transport(
+                "Газель", 2, 130, 15
+        );
+        Transport bychok = new Transport(
+                "Бычок", 3, 110, 18
+        );
+        Transport kamaz = new Transport(
+                "Камаз", 10, 90, 27
+        );
+
+        Transport[] transports = {gazelle, bychok, kamaz};
+
+        for (Transport transport : transports) {
+            System.out.println(transport.getName() + ": " +
+                    transport.getCapacity() + " т; " +
+                    transport.getSpeed() + " км/ч; " +
+                    transport.getCostOfKm() + " руб/км."
+            );
+        }
     }
 }
