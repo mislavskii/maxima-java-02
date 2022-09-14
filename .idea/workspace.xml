@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="cat">
+    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="names">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cat.java" afterDir="false" />
@@ -96,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663140385720</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="names">
+      <created>1663143067957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663143067957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +123,7 @@
     <MESSAGE value="checking the push" />
     <MESSAGE value="junit" />
     <MESSAGE value="cat" />
-    <option name="LAST_COMMIT_MESSAGE" value="cat" />
+    <MESSAGE value="names" />
+    <option name="LAST_COMMIT_MESSAGE" value="names" />
   </component>
 </project>
