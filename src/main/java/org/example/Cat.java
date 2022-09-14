@@ -2,8 +2,14 @@ package org.example;
 
 public class Cat {
     private String name;  // свойство общее для класса
+    private boolean isAngry;
 
-    public Cat(String name) {
+    public Cat(String name) {  // constructor
+        this.name = name;
+        this.isAngry = true;
+    }
+
+    public Cat(String name, boolean isAngry) {  // constructor 2
         this.name = name;
     }
 
@@ -13,6 +19,14 @@ public class Cat {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isAngry() {
+        return isAngry;
+    }
+
+    public void setAngry(boolean angry) {
+        isAngry = angry;
     }
 
     public void printName() {  // метод
