@@ -5,12 +5,12 @@ public class Cat {
     private boolean isAngry;
 
     public Cat(String name) {  // constructor
-        this.name = name;
-        this.isAngry = true;
+        this(name,true);
     }
 
     public Cat(String name, boolean isAngry) {  // constructor 2
         this.name = name;
+        this.isAngry = isAngry;
     }
 
     public String getName() {
