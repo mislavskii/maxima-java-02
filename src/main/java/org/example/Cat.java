@@ -1,7 +1,11 @@
 package org.example;
 
 public class Cat {
-    private String name = "Мурзик";  // свойство общее для класса
+    private String name;  // свойство общее для класса
+
+    public Cat(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -12,7 +16,7 @@ public class Cat {
     }
 
     public void printName() {  // метод
-        System.out.println("Имя котика: " + name);
+        System.out.println("Имя кота: " + this.getName());
     }
 
     public static void sayMeow(int n) {
