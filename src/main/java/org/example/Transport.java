@@ -2,11 +2,11 @@ package org.example;
 
 public class Transport {
     private String name;
-    private float capacity;
+    private int capacity;
     private int speed;
     private float costOfKm;
 
-    public Transport(String name, float capacity,
+    public Transport(String name, int capacity,
                      int speed, float costOfKm) {
         this.name = name;
         this.capacity = capacity;
@@ -22,11 +22,11 @@ public class Transport {
         this.name = name;
     }
 
-    public float getCapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(float capacity) {
+    public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 
@@ -44,5 +44,9 @@ public class Transport {
 
     public void setCostOfKm(float costOfKm) {
         this.costOfKm = costOfKm;
+    }
+
+    public float getPrice(City city) {
+        return city.getDistanceKm() * this.costOfKm;
     }
 }

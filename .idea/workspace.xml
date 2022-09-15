@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="angry">
+    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="logi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Transport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663176826933</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="dual constructor">
+      <created>1663177540343</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663177540343</updated>
+    </task>
+    <task id="LOCAL-00011" summary="logi">
+      <created>1663186927674</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663186927675</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +169,8 @@
     <MESSAGE value="getter setter" />
     <MESSAGE value="constructor" />
     <MESSAGE value="angry" />
-    <option name="LAST_COMMIT_MESSAGE" value="angry" />
+    <MESSAGE value="dual constructor" />
+    <MESSAGE value="logi" />
+    <option name="LAST_COMMIT_MESSAGE" value="logi" />
   </component>
 </project>
