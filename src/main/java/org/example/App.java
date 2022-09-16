@@ -13,7 +13,8 @@ public class App {
         n_kuznetsk.setHasAirport(true);
         n_kuznetsk.setOnWater(false);
 
-        Ship barge = new Ship("Баржа", 35, 10, 3.5f);
+        Ship barge = new Ship("Баржа", 35, 10, 350);
+        Plane antei = new Plane("Антей", 77, 770, 4200);
 
         City[] cities = {barnaul, ulgiy, n_kuznetsk};
 
@@ -22,6 +23,9 @@ public class App {
             + "на воде - " + city.isOnWater() + ".");
             System.out.println(barge.getName() + " to " + city.getName() + " = "
             + barge.getPrice(city) + " р.");
+            System.out.println(antei.getName() + " to " + city.getName() + " = "
+                    + antei.getPrice(city) + " р.");
+            System.out.println();
         }
         System.out.println();
 
