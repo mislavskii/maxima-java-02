@@ -3,11 +3,23 @@ package org.example;
 public class App {
     public static void main( String[] args ) {
 
-        City barnaul = new City("Барнаул", 258);
-        City ulgiy = new City("Улгий", 630);
+        City barnaul = new City("<fhyfek", 258);
+        City ulgiy = new City("Улгий", 630, true, false);
         City n_kuznetsk = new City("Новокузнецк", 360);
 
+        barnaul.setName("Барнаул");
+        barnaul.setDistanceKm(260);
+
+        n_kuznetsk.setHasAirport(true);
+        n_kuznetsk.setOnWater(false);
+
         City[] cities = {barnaul, ulgiy, n_kuznetsk};
+
+        for (City city : cities) {
+            System.out.println(city.getName() + ": " + "аэропорт - " + city.hasAirport() + ", "
+            + "на воде - " + city.isOnWater() + ".");
+        }
+        System.out.println();
 
         Transport gazelle = new Transport("Газель", 2, 130, 15);
         Transport bychok = new Transport("Бычок", 3, 110, 18);
@@ -21,7 +33,6 @@ public class App {
                     + transport.getSpeed() + " км/ч; " + transport.getCostOfKm() + " руб/км."
             );
         }
-
         System.out.println();
 
         for (City city : cities) {
