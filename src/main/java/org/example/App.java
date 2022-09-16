@@ -13,11 +13,15 @@ public class App {
         n_kuznetsk.setHasAirport(true);
         n_kuznetsk.setOnWater(false);
 
+        Ship barge = new Ship("Баржа", 35, 10, 3.5f);
+
         City[] cities = {barnaul, ulgiy, n_kuznetsk};
 
         for (City city : cities) {
             System.out.println(city.getName() + ": " + "аэропорт - " + city.hasAirport() + ", "
             + "на воде - " + city.isOnWater() + ".");
+            System.out.println(barge.getName() + " to " + city.getName() + " = "
+            + barge.getPrice(city) + " р.");
         }
         System.out.println();
 
@@ -26,6 +30,7 @@ public class App {
         Transport kamaz = new Transport("Камаз", 10, 90, 27);
 
         Transport[] transports = {gazelle, bychok, kamaz};
+
 
         for (Transport transport : transports) {
             System.out.println(
