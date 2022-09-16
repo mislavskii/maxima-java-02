@@ -29,14 +29,19 @@ public class App {
         }
         System.out.println();
 
-        Transport gazelle = new Transport("Газель", 2, 130, 15);
-        Transport bychok = new Transport("Бычок", 3, 110, 18);
-        Transport kamaz = new Transport("Камаз", 10, 90, 27);
+        Truck gazelle = new Truck("Ufptkm", 2, 130, 15);
+        Truck bychok = new Truck("Бычок", 3, 110, 18);
+        Truck kamaz = new Truck("Камаз", 10, 90, 27);
 
-        Transport[] transports = {gazelle, bychok, kamaz};
+        Truck[] trucks = {gazelle, bychok, kamaz};
+
+        gazelle.setName("Газель");
+        kamaz.setCapacity(11);
+        kamaz.setSpeed(80);
+        kamaz.setCostOfKm(kamaz.getCostOfKm() - 1);
 
 
-        for (Transport transport : transports) {
+        for (Truck transport : trucks) {
             System.out.println(
                     transport.getName() + ": " + transport.getCapacity() + " т; "
                     + transport.getSpeed() + " км/ч; " + transport.getCostOfKm() + " руб/км."
@@ -46,7 +51,7 @@ public class App {
 
         for (City city : cities) {
             System.out.println("в " + city.getName() + " (" + city.getDistanceKm() + " км)" + ":");
-            for (Transport transport : transports) {
+            for (Truck transport : trucks) {
                 System.out.println(transport.getName() + " - " + transport.getPrice(city) + "0 р.");
             }
             System.out.println();
