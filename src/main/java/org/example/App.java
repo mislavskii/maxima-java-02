@@ -69,8 +69,12 @@ public class App {
             System.out.println();
         }
 
-        Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei);
-        System.out.println(theFleet.getShipping(n_kuznetsk, 2, 6).getName());
+        Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei, barge);
+        Transport bestVehicle = theFleet.getShipping(n_kuznetsk, 2, 6);
+        if (bestVehicle != null) { System.out.println(bestVehicle.getName());
+        } else {
+            System.out.println("Перевозка невозможна");
+        }
 
     }
 

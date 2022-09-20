@@ -16,20 +16,24 @@ public class Logistics {
         float bestPrice = 0;
         int startIndex = 0;
         for (int i=0; i < vehicles.length; i++) {
-            float totalPrice = getTotalPrice(vehicles[i], city, weight, hours);
-            if (totalPrice > 0) {
-                bestPrice = totalPrice;
-                bestVehicle = vehicles[i];
-                startIndex = i + 1;
-                break;
+            if ( ( vehicles[i].getCapacity() >= weight ) && ( ( (float) city.getDistanceKm() ) / vehicles[i].getSpeed() <= hours ) ) {
+                float totalPrice = vehicles[i].getPrice(city);
+                if (totalPrice > 0) {
+                    bestPrice = totalPrice;
+                    bestVehicle = vehicles[i];
+                    startIndex = i + 1;
+                    break;
+                }
             }
         }
         if (startIndex < vehicles.length - 1) {
             for (Transport vehicle : java.util.Arrays.copyOfRange(vehicles, startIndex, vehicles.length - 1)) {
-                float totalPrice = getTotalPrice(vehicle, city, weight, hours);
-                if (totalPrice > 0 && totalPrice < bestPrice) {
-                    bestPrice = totalPrice;
-                    bestVehicle = vehicle;
+                if ( ( vehicle.getCapacity() >= weight ) && ( ( (float) city.getDistanceKm() ) / vehicle.getSpeed() <= hours ) ) {
+                    float totalPrice = vehicle.getPrice(city);
+                    if (totalPrice > 0 && totalPrice < bestPrice) {
+                        bestPrice = totalPrice;
+                        bestVehicle = vehicle;
+                    }
                 }
             }
         }
