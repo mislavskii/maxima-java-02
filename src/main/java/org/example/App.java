@@ -13,7 +13,8 @@ package org.example;
 // В классе Logistics учесть состояние транспортного средства при расчете грузоперевозок.
 
 public class App {
-    public static void main( String[] args ) {
+
+    public static void main(String[] args) {
 
         City barnaul = new City("<fhyfek", 258);
         City ulgiy = new City("Улгий", 630, true, false);
@@ -32,9 +33,9 @@ public class App {
 
         for (City city : cities) {
             System.out.println(city.getName() + ": " + "аэропорт - " + city.hasAirport() + ", "
-            + "на воде - " + city.isOnWater() + ".");
+                    + "на воде - " + city.isOnWater() + ".");
             System.out.println(barge.getName() + " to " + city.getName() + " = "
-            + barge.getPrice(city) + " р.");
+                    + barge.getPrice(city) + " р.");
             System.out.println(antei.getName() + " to " + city.getName() + " = "
                     + antei.getPrice(city) + " р.");
             System.out.println();
@@ -47,16 +48,15 @@ public class App {
 
         Truck[] trucks = {gazelle, bychok, kamaz};
 
-        gazelle.setName("Газель");
+        trucks[0].setName("Газель");
         kamaz.setCapacity(11);
         kamaz.setSpeed(80);
         kamaz.setCostOfKm(kamaz.getCostOfKm() - 1);
 
-
         for (Truck transport : trucks) {
             System.out.println(
                     transport.getName() + ": " + transport.getCapacity() + " т; "
-                    + transport.getSpeed() + " км/ч; " + transport.getCostOfKm() + " руб/км."
+                            + transport.getSpeed() + " км/ч; " + transport.getCostOfKm() + " руб/км."
             );
         }
         System.out.println();
@@ -68,5 +68,10 @@ public class App {
             }
             System.out.println();
         }
+
+        Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei);
+        System.out.println(theFleet.getShipping(n_kuznetsk, 2, 6).getName());
+
     }
+
 }
