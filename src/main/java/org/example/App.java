@@ -4,9 +4,9 @@ package org.example;
 // + Запретить создание экземпляров класса Transport, метод getPrice сделать абстрактным.
 // + Описать класс Logistics, при создании которого мы будем передавать ему некоторое количество
 // + объектов класса Transport, заполняя свойство vehicles.
-// Описать методы Transport getShipping(City city, int weight, int time) - найти самое оптимальное
-// по стоимости доставки транспортное средство.
-// Необходимо учесть грузоподъемность и необходимость доставки в указанный срок,
+// + Описать методы Transport getShipping(City city, int weight, int time) - найти самое оптимальное
+// + по стоимости доставки транспортное средство.
+// + Необходимо учесть грузоподъемность и необходимость доставки в указанный срок,
 // для определения возможности перевозки описать метод isShippingAvailable()
 // Описать Интерфейс Repairable с методами void startRepair(), void finishRepair(), boolean isRepairing().
 // Все виды транспорта должны реализовывать этот интерфейс.
@@ -70,7 +70,7 @@ public class App {
         }
 
         Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei, barge);
-        Transport bestVehicle = theFleet.getShipping(n_kuznetsk, 2, 6);
+        Transport bestVehicle = theFleet.getShipping(barnaul, 33, 48);
         if (bestVehicle != null) { System.out.println(bestVehicle.getName());
         } else {
             System.out.println("Перевозка невозможна");
