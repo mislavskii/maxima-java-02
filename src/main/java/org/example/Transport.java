@@ -1,12 +1,13 @@
 package org.example;
 
-public abstract class Transport {
+public abstract class Transport implements Repairable {
     private String name;
     private int capacity;
     private int speed;
     private float costOfKm;
+    private boolean isRepairing;
 
-    public Transport(String name, int capacity,
+    public Transport (String name, int capacity,
                      int speed, float costOfKm) {
         this.name = name;
         this.capacity = capacity;
@@ -48,4 +49,16 @@ public abstract class Transport {
 
     public abstract float getPrice(City city);
 
+    @Override
+    public boolean isRepairing() {
+        return isRepairing;
+    }
+
+    public void startRepair() {
+        this.isRepairing = true;
+    }
+
+    public void finishRepair() {
+        this.isRepairing = false;
+    }
 }

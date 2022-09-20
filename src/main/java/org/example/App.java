@@ -7,10 +7,10 @@ package org.example;
 // + Описать методы Transport getShipping(City city, int weight, int time) - найти самое оптимальное
 // + по стоимости доставки транспортное средство.
 // + Необходимо учесть грузоподъемность и необходимость доставки в указанный срок,
-// для определения возможности перевозки описать метод isShippingAvailable()
-// Описать Интерфейс Repairable с методами void startRepair(), void finishRepair(), boolean isRepairing().
-// Все виды транспорта должны реализовывать этот интерфейс.
-// В классе Logistics учесть состояние транспортного средства при расчете грузоперевозок.
+// + для определения возможности перевозки описать метод isShippingAvailable()
+// + Описать Интерфейс Repairable с методами void startRepair(), void finishRepair(), boolean isRepairing().
+// + Все виды транспорта должны реализовывать этот интерфейс.
+// + В классе Logistics учесть состояние транспортного средства при расчете грузоперевозок.
 
 public class App {
 
@@ -34,9 +34,9 @@ public class App {
         for (City city : cities) {
             System.out.println(city.getName() + ": " + "аэропорт - " + city.hasAirport() + ", "
                     + "на воде - " + city.isOnWater() + ".");
-            System.out.println(barge.getName() + " to " + city.getName() + " = "
+            System.out.println(barge.getName() + " в " + city.getName() + " = "
                     + barge.getPrice(city) + " р.");
-            System.out.println(antei.getName() + " to " + city.getName() + " = "
+            System.out.println(antei.getName() + " в " + city.getName() + " = "
                     + antei.getPrice(city) + " р.");
             System.out.println();
         }
@@ -68,6 +68,9 @@ public class App {
             }
             System.out.println();
         }
+
+        barge.startRepair();
+        barge.finishRepair();
 
         Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei, barge);
         Transport bestVehicle = theFleet.getShipping(barnaul, 33, 48);

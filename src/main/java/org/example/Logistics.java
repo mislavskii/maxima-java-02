@@ -28,8 +28,7 @@ public class Logistics {
         }
         if (startIndex < vehicles.length - 1) {
             for (Transport vehicle : java.util.Arrays.copyOfRange(vehicles, startIndex, vehicles.length - 1)) {
-                // if ( ( vehicle.getCapacity() >= weight ) && ( ( (float) city.getDistanceKm() ) / vehicle.getSpeed() <= hours ) ) {
-                if (isShippingAvailable(vehicle, city, weight, hours)) {
+                if ( isShippingAvailable (vehicle, city, weight, hours) ) {
                     float totalPrice = vehicle.getPrice(city);
                     if (totalPrice > 0 && totalPrice < bestPrice) {
                         bestPrice = totalPrice;
@@ -42,10 +41,12 @@ public class Logistics {
     }
 
     private boolean isShippingAvailable (Transport vehicle, City city, int weight, int hours) {
-        return ( ( vehicle.getCapacity() >= weight ) && ( ( (float) city.getDistanceKm() ) / vehicle.getSpeed() <= hours ) );
+        return  vehicle.getCapacity() >= weight
+                && ( (float) city.getDistanceKm() ) / vehicle.getSpeed() <= hours
+                && !vehicle.isRepairing();
     }
 
-    public float getTotalPrice (Transport vehicle, City city, int weight, int hours) {
+    private float getTotalPrice (Transport vehicle, City city, int weight, int hours) {
         float pricePerRun = vehicle.getPrice(city);
         if (pricePerRun == 0) { return 0; }
         int runs = divide(weight, vehicle.getCapacity());
