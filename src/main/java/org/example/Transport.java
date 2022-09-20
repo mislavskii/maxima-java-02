@@ -47,4 +47,5 @@ public abstract class Transport {
     }
 
     public abstract float getPrice(City city);
+
 }

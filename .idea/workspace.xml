@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="ship, plane, truck">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="abstract Transport">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Logistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Transport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Truck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663322305631</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="abstract Transport">
+      <created>1663645955883</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663645955883</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +221,7 @@
     <MESSAGE value="airport and waterway" />
     <MESSAGE value="plane" />
     <MESSAGE value="ship, plane, truck" />
-    <option name="LAST_COMMIT_MESSAGE" value="ship, plane, truck" />
+    <MESSAGE value="abstract Transport" />
+    <option name="LAST_COMMIT_MESSAGE" value="abstract Transport" />
   </component>
 </project>
