@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="repairable implemented">
+    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="cleaned up before investigating failed tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Transport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663714011167</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="cleaned up before investigating failed tests">
+      <created>1663744425955</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1663744425955</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +269,7 @@
     <MESSAGE value="logistics single run just minted" />
     <MESSAGE value="isShippingAvailable provisionally implemented" />
     <MESSAGE value="repairable implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="repairable implemented" />
+    <MESSAGE value="cleaned up before investigating failed tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up before investigating failed tests" />
   </component>
 </project>

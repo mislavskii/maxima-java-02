@@ -19,6 +19,7 @@ public class App {
         City barnaul = new City("<fhyfek", 258);
         City ulgiy = new City("Улгий", 630, true, false);
         City n_kuznetsk = new City("Новокузнецк", 360);
+        City tokio = new City ("Tokio", 4900, true, true);
 
         barnaul.setName("Барнаул");
         barnaul.setDistanceKm(260);
@@ -29,7 +30,7 @@ public class App {
         Ship barge = new Ship("Баржа", 35, 10, 350);
         Plane antei = new Plane("Антей", 77, 770, 4200);
 
-        City[] cities = {barnaul, ulgiy, n_kuznetsk};
+        City[] cities = {barnaul, ulgiy, n_kuznetsk, tokio};
 
         for (City city : cities) {
             System.out.println(city.getName() + ": " + "аэропорт - " + city.hasAirport() + ", "
@@ -68,13 +69,18 @@ public class App {
         barge.startRepair();
         barge.finishRepair();
 
-        Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei, barge);
-        Transport bestVehicle = theFleet.getShipping(barnaul, 3, 3);
+        // failed test recreation
+        Ship boat = new Ship("Boat", 15000, 30, 25F);
+        Plane zeppelin = new Plane("Zeppelin", 5000, 250, 200F);
+        Truck wagon = new Truck("Wagon", 3500, 90, 55.5F);
+        Logistics logistics = new Logistics(boat, zeppelin, wagon);
+        Transport bestVehicle = logistics.getShipping(tokio, 2000, 350);
         if (bestVehicle != null) {
             System.out.println("Отправляем " + bestVehicle.getName());
         } else {
             System.out.println("Перевозка невозможна");
         }
+
 
     }
 
