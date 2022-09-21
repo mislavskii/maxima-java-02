@@ -34,11 +34,6 @@ public class App {
         for (City city : cities) {
             System.out.println(city.getName() + ": " + "аэропорт - " + city.hasAirport() + ", "
                     + "на воде - " + city.isOnWater() + ".");
-            System.out.println(barge.getName() + " в " + city.getName() + " = "
-                    + barge.getPrice(city) + " р.");
-            System.out.println(antei.getName() + " в " + city.getName() + " = "
-                    + antei.getPrice(city) + " р.");
-            System.out.println();
         }
         System.out.println();
 
@@ -46,25 +41,26 @@ public class App {
         Truck bychok = new Truck("Бычок", 3, 110, 18);
         Truck kamaz = new Truck("Камаз", 10, 90, 27);
 
-        Truck[] trucks = {gazelle, bychok, kamaz};
+        Transport[] vehicles = {gazelle, bychok, kamaz, barge, antei};
 
-        trucks[0].setName("Газель");
+        vehicles[0].setName("Газель");
         kamaz.setCapacity(11);
         kamaz.setSpeed(80);
         kamaz.setCostOfKm(kamaz.getCostOfKm() - 1);
 
-        for (Truck transport : trucks) {
+        for (Transport vehicle : vehicles) {
             System.out.println(
-                    transport.getName() + ": " + transport.getCapacity() + " т; "
-                            + transport.getSpeed() + " км/ч; " + transport.getCostOfKm() + " руб/км."
+                    vehicle.getName() + ": " + vehicle.getCapacity() + " т; "
+                            + vehicle.getSpeed() + " км/ч; " + vehicle.getCostOfKm() + " руб/км."
             );
         }
         System.out.println();
 
         for (City city : cities) {
             System.out.println("в " + city.getName() + " (" + city.getDistanceKm() + " км)" + ":");
-            for (Truck transport : trucks) {
-                System.out.println(transport.getName() + " - " + transport.getPrice(city) + "0 р.");
+            for (Transport transport : vehicles) {
+                System.out.println(transport.getName() + " - " + transport.getPrice(city) + "0 р.; "
+                + transport.getTime(city) + " ч.");
             }
             System.out.println();
         }
@@ -73,8 +69,9 @@ public class App {
         barge.finishRepair();
 
         Logistics theFleet = new Logistics(gazelle, bychok, kamaz, antei, barge);
-        Transport bestVehicle = theFleet.getShipping(barnaul, 33, 48);
-        if (bestVehicle != null) { System.out.println(bestVehicle.getName());
+        Transport bestVehicle = theFleet.getShipping(barnaul, 3, 3);
+        if (bestVehicle != null) {
+            System.out.println("Отправляем " + bestVehicle.getName());
         } else {
             System.out.println("Перевозка невозможна");
         }

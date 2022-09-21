@@ -49,16 +49,16 @@ public abstract class Transport implements Repairable {
 
     public abstract float getPrice(City city);
 
+    public float getTime(City city) {
+        if ( this.getPrice(city) != 0 ) { return  (float) city.getDistanceKm() / this.getSpeed(); }
+        return 0;
+    }
+
     @Override
-    public boolean isRepairing() {
-        return isRepairing;
-    }
+    public boolean isRepairing() { return isRepairing; }
 
-    public void startRepair() {
-        this.isRepairing = true;
-    }
+    public void startRepair() { this.isRepairing = true; }
 
-    public void finishRepair() {
-        this.isRepairing = false;
-    }
+    public void finishRepair() { this.isRepairing = false; }
+
 }
