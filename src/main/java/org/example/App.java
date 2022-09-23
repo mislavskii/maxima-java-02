@@ -23,7 +23,7 @@ public class App {
         City[] cities = {barnaul, ulgiy, n_kuznetsk, tokio};
 
         int weight = 4350;
-        int hours = 48;
+        int hours = 480;
 
         TransportFactory factory = new TransportFactory();
 

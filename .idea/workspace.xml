@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="transport factory satisfactorily tested in situ" />
+    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="transport factory submission 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransportFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TransportFactory.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663913218660</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="transport factory submission 1">
+      <created>1663922526790</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1663922526790</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,7 +276,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initialized maven project" />
     <MESSAGE value="checking the push" />
     <MESSAGE value="junit" />
     <MESSAGE value="cat" />
@@ -290,6 +300,7 @@
     <MESSAGE value="fixed the bug in Logistics" />
     <MESSAGE value="transport factory just drafted" />
     <MESSAGE value="transport factory satisfactorily tested in situ" />
-    <option name="LAST_COMMIT_MESSAGE" value="transport factory satisfactorily tested in situ" />
+    <MESSAGE value="transport factory submission 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="transport factory submission 1" />
   </component>
 </project>

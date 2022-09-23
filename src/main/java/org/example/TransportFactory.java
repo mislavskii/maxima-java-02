@@ -9,12 +9,12 @@ public class TransportFactory {
     private float PLANE_COST_OF_KM = 5400;
 
     public Transport getTransport(City city, int weight, int hours) {
-        int requiredSpeed = city.getDistanceKm() / hours;
+        float requiredSpeed = (float) city.getDistanceKm() / hours;
         int transportSpeed;
         if (requiredSpeed % 10 != 0) {
-            transportSpeed = requiredSpeed / 10 * 10 + 10;
+            transportSpeed = (int) requiredSpeed / 10 * 10 + 10;
         } else {
-            transportSpeed = requiredSpeed;
+            transportSpeed = (int) requiredSpeed;
         }
         int transportCapacity;
         if (weight % 500 != 0) {
