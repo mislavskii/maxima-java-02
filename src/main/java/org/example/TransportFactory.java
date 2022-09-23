@@ -10,7 +10,6 @@ public class TransportFactory {
 
     public Transport getTransport(City city, int weight, int hours) {
         int requiredSpeed = city.getDistanceKm() / hours;
-        System.out.println(requiredSpeed);
         int transportSpeed;
         if (requiredSpeed % 10 != 0) {
             transportSpeed = requiredSpeed / 10 * 10 + 10;
