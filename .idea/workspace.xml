@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="fixed the bug in Logistics">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TransportFactory.java" afterDir="false" />
+    <list default="true" id="4d0e5379-2bdc-421f-a067-5ad456dbf077" name="Changes" comment="transport factory just drafted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransportFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TransportFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663749154452</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="transport factory just drafted">
+      <created>1663907885753</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1663907885753</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,6 +285,7 @@
     <MESSAGE value="repairable implemented" />
     <MESSAGE value="cleaned up before investigating failed tests" />
     <MESSAGE value="fixed the bug in Logistics" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the bug in Logistics" />
+    <MESSAGE value="transport factory just drafted" />
+    <option name="LAST_COMMIT_MESSAGE" value="transport factory just drafted" />
   </component>
 </project>

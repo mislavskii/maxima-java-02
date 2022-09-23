@@ -10,21 +10,25 @@ public class TransportFactory {
 
     public Transport getTransport(City city, int weight, int hours) {
         int requiredSpeed = city.getDistanceKm() / hours;
+        System.out.println(requiredSpeed);
+        int transportSpeed;
         if (requiredSpeed % 10 != 0) {
-            requiredSpeed = requiredSpeed / 10 + 10;
-        }
-        int requiredCapacity;
-        if (weight % 500 != 0) {
-            requiredCapacity = weight / 500 + 500;
+            transportSpeed = requiredSpeed / 10 * 10 + 10;
         } else {
-            requiredCapacity = weight;
+            transportSpeed = requiredSpeed;
+        }
+        int transportCapacity;
+        if (weight % 500 != 0) {
+            transportCapacity = weight / 500 * 500 + 500;
+        } else {
+            transportCapacity = weight;
         }
         if (requiredSpeed < 40 && city.isOnWater()) {
-            return new Ship (SHIP_NAME, requiredCapacity, requiredSpeed, SHIP_COST_OF_KM);
+            return new Ship (SHIP_NAME, transportCapacity, transportSpeed, SHIP_COST_OF_KM);
         } else if (requiredSpeed > 120 && city.hasAirport()) {
-            return new Plane(PLANE_NAME, requiredCapacity, requiredSpeed, PLANE_COST_OF_KM);
+            return new Plane(PLANE_NAME, transportCapacity, transportSpeed, PLANE_COST_OF_KM);
         } else {
-            return new Truck(TRUCK_NAME, requiredCapacity, requiredSpeed, TRUCK_COST_OF_KM);
+            return new Truck(TRUCK_NAME, transportCapacity, transportSpeed, TRUCK_COST_OF_KM);
         }
     }
 
