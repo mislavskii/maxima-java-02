@@ -37,4 +37,26 @@ public class Logistics {
                 && !vehicle.isRepairing();
     }
 
+    private boolean isShippingAvailableX(Transport vehicle, City city, int weight, int hours){
+        boolean isReachable = vehicle.getPrice(city)>0;
+        boolean isNotOverloaded = vehicle.getCapacity()>=weight;
+        boolean canShipInTime = city.getDistanceKm() / vehicle.getSpeed() <= hours;
+        return isReachable && isNotOverloaded && canShipInTime && !vehicle.isRepairing(); }
+
+// Before Null-object
+    public Transport getShippingX(City city, int weight, int hours){
+        Transport result = null;
+        for (Transport vehicle : vehicles){
+            if(isShippingAvailable(vehicle, city, weight, hours)){
+                if (result == null) {
+                    result = vehicle;
+                } else {
+                    if (vehicle.getPrice(city) < result.getPrice(city)) {
+                        result = vehicle;
+                    }
+                }
+            }
+        } return result;
+    }
+
 }
